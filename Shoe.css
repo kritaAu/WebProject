@@ -6,18 +6,29 @@
 }
 
 body{
-    background-color: cornflowerblue;
+    background-color: rgb(250, 250, 250);
     justify-content: center;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .main{
     box-sizing: border-box;
     width: 95%;
+    height: 100%;
     padding: 0rem 0.5rem;
-    background-color: azure;
-    border: 1px solid red;
+    background-color: rgb(255, 255, 255);
     padding-top: 4rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    
 }
 /* menu */
 .menu{
@@ -26,48 +37,62 @@ body{
     width: 100%;
     display: flex;
     justify-content: start;
-    border: 1px solid blue;
+  
     position: fixed;
     box-shadow: 0 0 10px #333;
+    
+    top: 0;
+    z-index: 1;
 }
 
 .logo{
-    border: 1px solid red;
     width: 15%;
     text-align: center;
     display: flex;
     justify-content: center;
-    background-color: aquamarine;
+    background-color: rgb(0, 0, 0);
 }
 .logo h1{
     padding-top: 0.5rem;
-    border: 1px solid red;
-
+    color: aliceblue;
 }
 
 .menu ul{
     background-color: whitesmoke;
-    width: 100%;
-    border: 1px solid red;
+    width: 100%;  
     list-style: none;
     display: flex;
     justify-content: end;
      
 }
 .menu ul li{
-    margin: 0 1rem;
+    margin: 0 0.3rem;
     text-decoration: none;
-    border: 1px solid red;
     padding: 1rem;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu ul li a{
     text-decoration: none;
     color: rgb(0, 0, 0);
-    border: 1px solid red;
     padding: 0.5rem;
+    font-size: 18px;
+}
 
+.ani::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width .3s;
+}
+
+.ani:hover::after{
+    width: 100%;
+    transition: width .3s;
 }
 
 /* ShowPicture NewProduct */
@@ -76,62 +101,150 @@ body{
     box-sizing: border-box;
     width: 100%;
     display: flex;
-    border: 1px solid red;
     flex-direction: column;
 }
 
 .infoNew{
     text-align: center;
     padding: 1rem;
+    margin: 2rem;
 }
 
 .PicNew img{
     width: 100%;
     height: 100%;
+   
 }
 
 /* ProductLine */
 .product{
     display: flex;
-    border: 1px solid black;
     box-sizing: border-box;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .itemB{
-    border: 1px solid greenyellow;
     margin: 1rem 1rem;
     width: 30%;
+    border-radius: 25px;
+    box-shadow: 0 0 5px #333;
+    background-color:whitesmoke;
+    overflow: hidden;
 }
 
 .picB img{
     width: 100%;
     height: 100%;
-    border: 1px solid red;
     justify-content: center;
     object-fit: cover;
 }
 
 .infoB{
     display: flex;
-    border: 1px solid red;
-    justify-content: start;
     justify-content: space-between;
     padding: 0.5rem;
+    
 }
 
 .infoB h4{
-    border: 1px solid red;
    justify-content: space-between;
+   padding-left: 15px;
 }
 
 .infoB p{
-    border: 1px solid red;
+   padding-left: 17px;
 }
 
 .spanB span{
-    border: 1px solid rgb(209, 31, 200);
+    
     justify-self: end;
     margin-right: 0.5rem;
 }
+
+/* Footer */
+
+.footer{
+    bottom: 0;
+    width: 100%;
+}
+
+.footerinfo {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0);
+}
+
+.footerinfo h1{
+    color:#333;
+   
+    padding: 0.3rem;
+}
+
+.footerinfo p{
+    padding: 0.3rem;
+    color: #333;
+}
+
+/* table*/
+
+.tableS{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    justify-content: space-evenly;
+    gap: 12rem;
+    text-align: center;
+}
+
+.infoMen{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.tableS h2{
+    color: #000000;
+    padding: 2rem;
+    font-size: 20px;
+}
+
+
+
+.infoMen{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+
+ table {
+    border: 1px solid red;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    
+    
+  }
+  
+ thead {
+    background-color: #f5f5f5;
+  }
+  
+ th,td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+ th {
+    font-weight: bold;
+  }
+  
+ tr:nth-child(even) {
+    background-color: #cac5c5;
+  }
+  
+ td:first-child {
+    font-weight: bold;
+  }
+  
