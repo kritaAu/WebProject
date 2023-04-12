@@ -28,6 +28,7 @@ body{
     padding-bottom: 8rem;
     display: flex;
     flex-direction: column;
+    border: 1px solid red;
     
 }
 /* menu */
@@ -40,18 +41,27 @@ body{
   
     position: fixed;
     box-shadow: 0 0 10px #333;
-    
+    border: 1px solid red;
     top: 0;
     z-index: 1;
 }
 
 .logo{
     width: 15%;
-    text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: rgb(0, 0, 0);
+    border: 1px solid red;
+    overflow: hidden;
 }
+
+.logo img{
+    width: 115%;
+    margin-left: -1rem;
+    
+}
+
 .logo h1{
     padding-top: 0.5rem;
     color: aliceblue;
@@ -63,10 +73,11 @@ body{
     list-style: none;
     display: flex;
     justify-content: end;
+    padding-right: 3.5rem;
      
 }
 .menu ul li{
-    margin: 0 0.3rem;
+    margin: 0 0.2rem;
     text-decoration: none;
     padding: 1rem;
     display: flex;
@@ -77,8 +88,9 @@ body{
 .menu ul li a{
     text-decoration: none;
     color: rgb(0, 0, 0);
-    padding: 0.5rem;
+    padding: 0.4rem;
     font-size: 18px;
+    font-weight: 600;
 }
 
 .ani::after{
@@ -167,6 +179,7 @@ body{
 .footer{
     bottom: 0;
     width: 100%;
+    border: 1px solid red;
 }
 
 .footerinfo {
@@ -190,8 +203,7 @@ body{
 
 .tableS{
     display: flex;
-    justify-content: center;
-    align-items: center;    
+    align-items: stretch;    
     justify-content: space-evenly;
     gap: 12rem;
     text-align: center;
@@ -248,3 +260,251 @@ body{
     font-weight: bold;
   }
   
+  /* Contact */
+
+  .boxCon{
+    display: flex;
+    position: relative;
+    width: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+	background-color: #fff;
+    margin-top: 9rem;
+   
+  }
+
+  .boxleft{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+    overflow: hidden;
+  }
+
+
+.boxright{
+    display: flex;
+    flex-direction: column;
+	padding: 25px 40px;
+}
+
+.boxright h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+.boxright h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #000000;
+}
+
+.filedCon{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.filedCon:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #000000;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    
+}
+
+.filedCon:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.boxCon{
+		display: flex;
+        flex-direction: column;
+	}
+	.boxleft{
+		height: 100%;
+     
+	}
+}
+
+/* thankyou */
+
+.Thank{
+    text-align: center;
+}
+
+.Thank h1{
+    padding: 16rem 0;
+    font-size: 100px;
+}
+
+
+/* allproduct */
+
+.AllProduct{
+    margin-top: 2rem;
+}
+
+.forMen h1{
+    padding-left: 3rem;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+.forWomen h1{
+    padding-left: 3rem;
+    padding-top: 1rem;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+/* Mainproduct */
+.mainProduct{
+    display: flex;
+    padding: 2rem;
+}
+
+.mainProduct img{
+    margin-left: 5rem;
+    width: 35%;
+    border: 1px solid #000000;
+    box-shadow: 0 0 4px #333;
+}
+
+.Comming{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: left;
+    padding-top: 30px;
+    gap: 3.5rem;
+    padding-left: 40px;
+    justify-content: start;
+    align-items: start;
+}
+
+.Comming h1{
+  font-size: 4rem;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  
+}
+
+.Comming p{
+    padding: 10px;
+    font-size: 1.5rem;
+    text-indent: 30px;
+   
+}
+
+.Comming button{
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+
+.Comming span{
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.btnC{
+    
+    width: 20%;
+    border-radius: 20px;
+	padding: 0.5rem 1rem;
+	background-color: #000000;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+
+}
+
+.btnC:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    
+}
+
+@media screen and (max-width: 900px){
+	.mainProduct{
+		display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        
+	}
+	.mainProduct img{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .Comming button{
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+    }
+    
+    .Comming span{
+        position: absolute;
+        bottom: 0px;
+        left: 50px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .Comming p{
+        padding: 10px;
+        font-size: 1.5rem;
+        text-indent: 30px;
+        padding-bottom: 60px;
+    }
+    .btnC{
+    
+        width: 25%;
+       
+    
+    }
+}
