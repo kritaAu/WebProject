@@ -38,12 +38,10 @@ body{
     width: 100%;
     display: flex;
     justify-content: start;
-  
     position: fixed;
     box-shadow: 0 0 10px #333;
-    border: 1px solid red;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .logo{
@@ -53,19 +51,19 @@ body{
     align-items: center;
     background-color: rgb(0, 0, 0);
     border: 1px solid red;
-    overflow: hidden;
+    position: relative;
 }
 
 .logo img{
-    width: 115%;
-    margin-left: -1rem;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
 }
 
-.logo h1{
-    padding-top: 0.5rem;
-    color: aliceblue;
-}
+
 
 .menu ul{
     background-color: whitesmoke;
@@ -78,7 +76,6 @@ body{
 }
 .menu ul li{
     margin: 0 0.2rem;
-    text-decoration: none;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -107,6 +104,73 @@ body{
     transition: width .3s;
 }
 
+.toggle{
+    display: none;
+}
+
+@media screen and (max-width: 1000px){
+	.menu{
+        height: 120px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top:0rem;
+       
+    }
+
+    .toggle{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 30px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .logo{
+        height: 100px;
+        margin-bottom: 2rem;
+        width: 30%;
+        background-color: rgb(0, 0, 0);
+        position: relative;
+        position: absolute;
+        top: 6px;
+    }
+    
+    .logo img{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+
+    .menu ul{
+        margin-top: 28rem;
+        flex-direction: column;
+        padding: 0;
+        justify-content: end;
+        align-items: center;
+        display: none;
+        background-color: rgb(250, 250, 250);
+        z-index: -1;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu ul li{
+        font-size: 15px;
+        margin: 12px;
+        text-align: center;
+        padding: 5px 50px;
+    }
+
+    .active{
+        display: flex !important;
+    }
+    
+}
 /* ShowPicture NewProduct */
 
 .NewPro{
@@ -119,7 +183,9 @@ body{
 .infoNew{
     text-align: center;
     padding: 1rem;
-    margin: 2rem;
+    margin-top: 2rem;
+    text-decoration: underline;
+    font-size: 30px;
 }
 
 .PicNew img{
@@ -143,6 +209,12 @@ body{
     box-shadow: 0 0 5px #333;
     background-color:whitesmoke;
     overflow: hidden;
+}
+
+
+.itemB a{
+    text-decoration: none;
+    color: #000000;
 }
 
 .picB img{
@@ -169,7 +241,7 @@ body{
 }
 
 .spanB span{
-    
+    font-weight: bold;
     justify-self: end;
     margin-right: 0.5rem;
 }
@@ -189,14 +261,31 @@ body{
 }
 
 .footerinfo h1{
+    text-align: center;
     color:#333;
-   
     padding: 0.3rem;
 }
 
-.footerinfo p{
-    padding: 0.3rem;
+.footerinfo h3{
+    margin-left: 1rem;
+    text-align: left;
     color: #333;
+    margin-bottom: 2px;
+}
+
+.footer ul{
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    border: 1px solid red;
+    flex-direction: column;
+    color: #333;
+}
+
+.footer ul li{
+    padding: 5px;
+
 }
 
 /* table*/
@@ -469,7 +558,7 @@ textarea{
     
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
 	.mainProduct{
 		display: flex;
         flex-direction: column;
@@ -507,4 +596,27 @@ textarea{
        
     
     }
+}
+
+
+/* about */
+
+.about{
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about h1{
+    margin-bottom: 20px;
+    font-size: 70px;
+    text-decoration: underline;
+}
+
+.about p{
+    padding: 2px;
+    font-size: 25px;
+    text-indent: 50px;
 }
