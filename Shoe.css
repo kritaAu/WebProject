@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Mitr', sans-serif;
 }
 
 body{
@@ -610,12 +610,15 @@ textarea{
 }
 
 .about h1{
+    text-align: center;
     margin-bottom: 20px;
     font-size: 70px;
     text-decoration: underline;
+    color: #333;
 }
 
 .about p{
+    color: #333;
     padding: 2px;
     font-size: 25px;
     text-indent: 50px;
