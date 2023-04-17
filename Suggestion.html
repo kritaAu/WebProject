@@ -34,12 +34,19 @@
                 <img src="image/Conpic.webp" alt="">
             </div>
             <div class="boxright">
+                <form> 
                 <h2>Suggestion</h2>
                 <input type="text" class="filedCon" placeholder="Your Name">
                 <input type="email" class="filedCon" placeholder="Your Email">
                 <input type="text" class="filedCon" placeholder="Your Phone">
                 <textarea  class="filedCon" placeholder="Massage"></textarea>
-               <a href="Thankyou.html"><button class="btn">Send</button></a>
+                <button type="reset" class="btn" onclick="openPopup()">Send</button>
+            </form>
+            </div>
+            <div class="popup" id="popup">
+                <h2>Thank You For Your Guidance!!!</h2>
+                <p>Your insights and recommendations have been incredibly helpful.</p>
+                <button type="button" onclick="closePopup()">OK</button>
             </div>
         </div>
 
